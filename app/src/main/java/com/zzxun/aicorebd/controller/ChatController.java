@@ -12,6 +12,7 @@ import reactor.core.publisher.Flux;
 
 import java.util.Map;
 
+
 @RestController
 public class ChatController {
 
@@ -29,6 +30,7 @@ public class ChatController {
 
     @GetMapping("/ai/generateStream")
     public Flux<ChatResponse> generateStream(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message) {
+        System.out.println("get input message:" + message);
         Prompt prompt = new Prompt(new UserMessage(message));
         return this.chatModel.stream(prompt);
     }
