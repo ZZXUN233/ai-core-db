@@ -5,7 +5,8 @@
     <parent>
         <artifactId>ai-core-bd</artifactId>
         <groupId>com.zzxun</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${reversion}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
